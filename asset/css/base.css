@@ -1,0 +1,240 @@
+:root{
+    --white-color : #fff;
+    --black-color : #000;
+    --text-color : #333;   
+    --primary-color : #f53d2d;
+    --header-height : 120px;
+    --navbar-height : 30px ;
+    --search-height : calc(var(--header-height) - var(--navbar-height))
+}
+
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.mg_4{
+    margin: 4px;
+}
+
+
+html{
+    
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  
+}
+
+.grid__colum-2{
+    padding: 0 5px ;
+    width: calc((2/12) * 100%);
+}
+
+.grid__colum-2-10{
+    padding: 0 5px;
+    width: 20%;
+}
+
+
+
+.grid__colum-10{
+    padding: 0 5px ;
+    width: calc((10/12) * 100%);
+}
+
+.btn-nav{
+    background-color: #fff; 
+    margin-left: 10px; 
+    border-radius: 2px;
+}
+
+.btn-nav + .btn-nav{
+    margin-left: 10px;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    animation: FadeIn linear 0.1s;
+    display: none;
+}
+
+
+@keyframes FadeIn{
+    from{
+        transform:  scale(0);      
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes grow{
+    from{
+        transform:  scale(0.7);      
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.modal-body{
+    margin-top: 80px;
+    position: absolute;
+    width: 520px; 
+    background-color: #fff;
+    border-radius: 4px;
+    animation: grow ease-in 0.2s;
+}
+
+.modal-form--login{
+    display: none;
+}
+.modal-form--register{
+    display: none;
+}
+
+.open_flex{
+    display: flex ;
+}
+.open_block{
+    display: block  ;
+}
+
+
+
+.modal-form__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 32px;
+    font-size: 1.6rem;
+}
+
+.modal-form__switch-btn{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.modal-form__input{
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.modal-form__input > input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    /* outline: none; */
+    border: 1px solid #dbdbdb;    
+}
+
+.modal-form__aside{
+    margin:  12px 24px 100px;
+    text-align: center;
+}
+
+.modal-form__aside > input{
+    padding: 4px;
+    margin-bottom: -4px;
+    margin-right: 4px;
+}
+
+.modal-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-form--text{
+    line-height: 1;
+    font-size: 1.3rem;
+}
+
+.modal-form--link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color:var(--primary-color);
+}
+
+
+.modal-form__controls{
+    margin: 0px 20px;
+    padding: 8px;
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: flex-end;
+}
+.modal-form__socials{
+    font-size: 1.4rem;
+    padding: 16px 12px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.modal-form__socials--link{
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 2px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.modal-form__socials--link > i{
+    margin-right: 12px;
+}
+
+.modal-form--facebook{
+    background-color: #1877f2;
+    color: #fff;
+
+}
+.modal-form--google{
+    background-color: #fff;
+    color: var(--text-color);
+
+}
+
+.modal-form--forgotPassword{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.modal-form--help{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.modal-form_space{
+    margin: 0 16px;
+    border-left: 1px solid #939393;
+}
